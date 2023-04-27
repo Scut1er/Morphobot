@@ -71,7 +71,7 @@ def analysis(message):
                     delay[message.from_user.id] = datetime.now()
                     bot.reply_to(message, analyzying(text))
             else:
-                bot.reply_to(message, 'Файл неподдерживаемого формата')
+                bot.reply_to(message, 'Файл неподдерживаемого формата или больше 2 Мбайт')
         else:
             f = message.text.split('\n')
             bot.reply_to(message, analyzying(f))
